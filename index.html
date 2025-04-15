@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carolina Gutiérrez - Portafolio de Diseño 3D</title>
+    <title>Carolina Gutiérrez - Portafolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* ===== VARIABLES Y ESTILOS BASE ===== */
@@ -12,11 +12,9 @@
             --secondary-color: #333;
             --light-bg: #f5f5f5;
             --white: #ffffff;
-            --dark-bg: #222;
             --gap: 30px;
-            --border-radius: 12px;
-            --box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            --transition: all 0.3s ease;
+            --border-radius: 10px;
+            --box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         * {
@@ -29,16 +27,15 @@
             font-family: 'Montserrat', sans-serif;
             color: var(--secondary-color);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         h1, h2, h3 {
             font-weight: normal;
         }
 
-        /* ===== HABILIDADES ===== */
+        /* ===== UTILIDADES ===== */
         .contenedor {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -51,10 +48,10 @@
         }
 
         .seccion {
-            padding: 80px 0;
+            padding: 60px 0;
         }
 
-        /* ===== SECCIÓN HERO ===== */
+        /* ===== SECCIÓN HOLA ===== */
         .hola {
             min-height: 100vh;
             display: flex;
@@ -63,27 +60,25 @@
             align-items: center;
             text-align: center;
             background-color: var(--light-bg);
-            padding: 40px 20px;
+            padding: 20px;
         }
 
         .saludo {
             font-size: 1.8rem;
             font-weight: 300;
-            margin-bottom: 15px;
-            color: var(--primary-color);
+            margin-bottom: 10px;
         }
 
         .titulo-principal {
             font-family: 'Jersey 20', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: clamp(2.2rem, 5vw, 3rem);
             color: var(--primary-color);
             margin-bottom: 20px;
         }
 
         .descripcion {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 1.1rem;
+            max-width: 500px;
         }
 
         /* ===== SECCIÓN INFORMACIÓN ===== */
@@ -97,73 +92,58 @@
         }
 
         .tarjeta-imagen {
-            flex: 0 0 350px;
+            flex: 0 0 250px;
         }
 
         .tarjeta-imagen img {
             width: 100%;
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
-            transition: var(--transition);
-        }
-
-        .tarjeta-imagen img:hover {
-            transform: scale(1.03);
         }
 
         .titulo-seccion {
             font-family: 'Jersey 20', sans-serif;
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--primary-color);
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        .titulo-seccion::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--primary-color);
-            margin-top: 15px;
+            margin-bottom: 20px;
         }
 
         /* Contacto */
         .lista-contactos {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .item-contacto {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .icono-contacto {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
         }
 
         .texto-contacto {
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         /* Educación */
         .item-educacion {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .item-educacion h3 {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--primary-color);
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .item-educacion p {
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
         /* ===== SECCIÓN HABILIDADES ===== */
@@ -180,31 +160,33 @@
 
         .columna-habilidad {
             flex: 1;
-            min-width: 250px;
+            min-width: 100px;
+        }
+        .programas {
+            flex: 1;
+            min-width: 100px;
         }
 
         .programas {
-            flex: 1;
-            min-width: 250px;
+            flex: 0 0 100px;
         }
 
         .programas img {
-            width: 100%;
-            max-width: 300px;
+            width: 70%;
         }
 
         /* Idiomas (horizontal) */
         .idiomas-lista {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 10px;
         }
 
         /* Intereses (horizontal) */
         .intereses-lista {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 10px;
         }
 
         /* Estilo para items con icono */
@@ -213,17 +195,11 @@
             align-items: center;
             gap: 10px;
             background-color: white;
-            padding: 12px 18px;
-            border-radius: 30px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            font-size: 1rem;
+            padding: 10px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
             font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .item-con-icono:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
         .icono-item {
@@ -234,104 +210,76 @@
         /* ===== GALERÍA DE PROYECTOS ===== */
         .seccion-proyectos {
             background-color: var(--white);
+            padding: 60px 0;
         }
 
         .galeria-container {
-            max-width: 1400px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 30px;
+            padding: 0 20px;
             text-align: center;
         }
 
-        .carrusel-container {
-            position: relative;
-            margin: 50px 0;
-        }
-
+        /* Contenedor del carrusel */
         .carrusel {
-            width: 100%;
-            overflow: hidden;
             position: relative;
-        }
-
-        .carrusel-imagenes {
-            display: flex;
-            transition: var(--transition);
-            gap: 25px;
-            padding: 30px 0;
-        }
-
-        .carrusel-imagenes img {
-            width: 750px;
-            height: 550px;
-            object-fit: cover;
-            border-radius: var(--border-radius);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            cursor: pointer;
-            transition: var(--transition);
-            flex-shrink: 0;
-        }
-
-        .carrusel-imagenes img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-
-        .carrusel-boton {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 60px;
-            height: 60px;
-            background: rgba(217, 4, 4, 0.9);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 24px;
-            cursor: pointer;
-            z-index: 10;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: var(--transition);
+            overflow: hidden;
+            margin: 30px 0;
+        }
+
+        /* Contenedor de imágenes (desplazable horizontalmente) */
+        .carrusel-imagenes {
+            display: flex;
+            gap: 15px;
+            transition: transform 0.5s ease;
+            padding: 10px 0;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Estilo de cada imagen del carrusel */
+        .carrusel-imagenes img {
+            width: 750px;
+            height: 500px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+
+        /* Efecto hover para las imágenes */
+        .carrusel-imagenes img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Botones de navegación */
+        .carrusel-boton {
+            background: rgba(217, 4, 4, 0.7);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+            z-index: 10;
+            margin: 0 10px;
+            transition: background 0.3s ease;
+            flex-shrink: 0;
         }
 
         .carrusel-boton:hover {
             background: var(--primary-color);
-            transform: translateY(-50%) scale(1.1);
         }
 
-        .carrusel-boton.prev {
-            left: -30px;
-        }
-
-        .carrusel-boton.next {
-            right: -30px;
-        }
-
-        /* Puntos indicadores */
-        .carrusel-puntos {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 30px;
-        }
-
-        .punto {
-            width: 12px;
-            height: 12px;
-            background: rgba(217, 4, 4, 0.3);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .punto.activo {
-            background: var(--primary-color);
-            transform: scale(1.3);
-        }
-
-        /* Modal */
+        /* ===== MODAL CON CARRUSEL INTERNO ===== */
         .modal {
             display: none;
             position: fixed;
@@ -339,163 +287,225 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.95);
+            background: rgba(0, 0, 0, 0.9);
             z-index: 1000;
-            overflow: auto;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s;
         }
 
         .modal-contenido {
             display: flex;
             flex-direction: column;
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            width: 90%;
+            max-width: 1000px;
+            max-height: 90vh;
+        }
+
+        .modal-galeria {
+            height: 60%;
+            background: #f5f5f5;
+            padding: 20px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            padding: 60px 30px;
+        }
+
+        .galeria-carrusel {
             position: relative;
-            max-width: 1200px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .galeria-imagenes {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            scroll-snap-type: x mandatory;
+            align-items: center;
+        }
+
+        .galeria-imagenes img {
+            width: 750px;
+            height: 500px;
+            object-fit: contain;
+            scroll-snap-align: start;
+            flex-shrink: 0;
             margin: 0 auto;
         }
 
-        .modal-imagen {
-            max-width: 85%;
-            max-height: 70vh;
-            border-radius: var(--border-radius);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            object-fit: contain;
+        .galeria-boton {
+            position: absolute;
+            background: rgba(217, 4, 4, 0.7);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 20px;
+            z-index: 10;
+            transition: background 0.3s;
         }
 
-        .modal-info {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: var(--border-radius);
-            margin-top: 30px;
-            width: 85%;
-            max-width: 800px;
-            box-shadow: var(--box-shadow);
+        .galeria-boton:hover {
+            background: var(--primary-color);
         }
 
-        .modal-titulo {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            font-family: 'Jersey 20', sans-serif;
+        .galeria-boton.prev {
+            left: 10px;
+        }
+
+        .galeria-boton.next {
+            right: 10px;
         }
 
         .modal-texto {
+            padding: 30px;
             color: var(--secondary-color);
-            line-height: 1.7;
-            font-size: 1.1rem;
+            height: 40%;
+            overflow-y: auto;
+        }
+
+        .modal-texto h3 {
+            color: var(--primary-color);
+            font-family: 'Jersey 20', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
         }
 
         .cerrar-modal {
             position: absolute;
-            top: 40px;
-            right: 50px;
+            top: 20px;
+            right: 30px;
             color: white;
-            font-size: 40px;
+            font-size: 35px;
             cursor: pointer;
-            transition: var(--transition);
+            transition: color 0.3s ease;
         }
 
         .cerrar-modal:hover {
             color: var(--primary-color);
-            transform: scale(1.2);
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
         /* ===== RESPONSIVO ===== */
-        @media (max-width: 1400px) {
-            .carrusel-imagenes img {
-                width: 650px;
-                height: 480px;
-            }
-        }
-
         @media (max-width: 1200px) {
-            .carrusel-imagenes img {
-                width: 550px;
+            .carrusel-imagenes img,
+            .galeria-imagenes img {
+                width: 600px;
                 height: 400px;
-            }
-            
-            .carrusel-boton {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-            
-            .carrusel-boton.prev {
-                left: -20px;
-            }
-            
-            .carrusel-boton.next {
-                right: -20px;
             }
         }
 
         @media (max-width: 992px) {
-            .carrusel-imagenes img {
-                width: 450px;
-                height: 330px;
-            }
-            
-            .modal-info {
-                padding: 20px;
+            .carrusel-imagenes img,
+            .galeria-imagenes img {
+                width: 500px;
+                height: 333px;
             }
         }
 
         @media (max-width: 768px) {
-            .seccion {
-                padding: 60px 0;
+            .hola {
+                padding: 80px 20px;
+            }
+            
+            .contenedor-flex {
+                flex-direction: column;
+                align-items: center;
             }
             
             .tarjeta-imagen {
-                flex: 0 0 300px;
+                margin-bottom: 30px;
             }
             
-            .carrusel-imagenes img {
-                width: 380px;
-                height: 280px;
+            .habilidades-columnas {
+                flex-direction: column;
             }
             
-            .modal-imagen {
-                max-width: 90%;
+            .idiomas-lista, .intereses-lista {
+                justify-content: flex-start;
             }
             
-            .modal-info {
-                width: 90%;
+            .item-con-icono {
+                padding: 8px 12px;
+            }
+
+            .carrusel-imagenes img,
+            .galeria-imagenes img {
+                width: 400px;
+                height: 267px;
             }
             
-            .cerrar-modal {
-                top: 30px;
-                right: 30px;
-                font-size: 35px;
+            .carrusel-boton {
+                padding: 8px 12px;
+                font-size: 16px;
+            }
+
+            .modal-contenido {
+                height: 95%;
+                width: 95%;
+            }
+            
+            .modal-galeria {
+                height: 50%;
+            }
+            
+            .modal-texto {
+                height: 50%;
             }
         }
 
         @media (max-width: 576px) {
-            .carrusel-imagenes img {
-                width: 320px;
-                height: 240px;
+            .programa-item img {
+                width: 70%;
+                height: 70%;
             }
-            
-            .titulo-seccion {
-                font-size: 1.8rem;
+
+            .carrusel-imagenes img,
+            .galeria-imagenes img {
+                width: 300px;
+                height: 200px;
             }
-            
-            .modal-titulo {
+
+            .modal-texto {
+                padding: 20px;
+            }
+
+            .modal-texto h3 {
                 font-size: 1.5rem;
             }
-            
-            .modal-texto {
-                font-size: 1rem;
+
+            .cerrar-modal {
+                top: 10px;
+                right: 20px;
+                font-size: 30px;
             }
         }
 
-        /* Deshabilitar scrollbars en el carrusel */
-        .carrusel-imagenes::-webkit-scrollbar {
+        .carrusel-imagenes::-webkit-scrollbar,
+        .galeria-imagenes::-webkit-scrollbar {
             display: none;
         }
 
-        .carrusel-imagenes {
+        .carrusel-imagenes,
+        .galeria-imagenes {
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
@@ -504,11 +514,9 @@
 <body>
     <!-- Sección Hola -->
     <section class="hola">
-        <div class="contenedor">
-            <p class="saludo">Hola</p>
-            <h1 class="titulo-principal">Mi nombre es Carolina</h1>
-            <p class="descripcion">Estudiante de diseño integral especializada en modelado 3D y edición, creando mundos digitales impresionantes.</p>
-        </div>
+        <p class="saludo">Hola</p>
+        <h1 class="titulo-principal">Mi nombre es Carolina</h1>
+        <p class="descripcion">Estudiante de diseño integral especializada en modelado 3D y edición.</p>
     </section>
 
     <!-- Sección Información -->
@@ -525,22 +533,16 @@
                     <h2 class="titulo-seccion">Contacto</h2>
                     <div class="lista-contactos">
                         <div class="item-contacto">
-                            <a href="https://wa.me/525522131474" target="_blank" class="item-contacto">
                             <img src="img/telefono.png" alt="Teléfono" class="icono-contacto">
                             <span class="texto-contacto">+52 55 22 13 1474</span>
-                            </a>
                         </div>
                         <div class="item-contacto">
-                            <a href="mailto:carolina302_gutierrez@hotmail.com" class="item-contacto">
                             <img src="img/email.png" alt="Email" class="icono-contacto">
                             <span class="texto-contacto">carolina302_gutierrez@hotmail.com</span>
-                            </a>
                         </div>
                         <div class="item-contacto">
-                            <a href="https://profile.indeed.com/?hl=es_MX&co=MX&from=gnav-homepage" class="item-contacto">
-                            <img src="img/in.png" alt="Email" class="icono-contacto">
-                            <span class="texto-contacto">Carolina Gutiérrez/span>
-                            </a>
+                            <img src="img/in.png" alt="LinkedIn" class="icono-contacto">
+                            <span class="texto-contacto">linkedin.com/in/carolinag</span>
                         </div>
                     </div>
                 </div>
@@ -567,15 +569,15 @@
     <section class="seccion seccion-habilidades">
         <div class="contenedor">
             <div class="habilidades-columnas">
-                <!-- Sección Programas -->
+                <!-- Sección Programas con dos columnas fijas -->
                 <div class="columna-habilidad">
                     <h2 class="titulo-seccion">Programas</h2>
                     <div class="programas">
-                        <img src="img/Programas.png" alt="Programas que domino">
+                      <img src="img/Programas.png" alt="programas">
                     </div>
                 </div>
                 
-                <!-- Idiomas -->
+                <!--Idiomas e Intereses -->
                 <div class="columna-habilidad">
                     <h2 class="titulo-seccion">Idiomas</h2>
                     <div class="idiomas-lista">
@@ -594,7 +596,6 @@
                     </div>
                 </div>
                 
-                <!-- Intereses -->
                 <div class="columna-habilidad">
                     <h2 class="titulo-seccion">Intereses</h2>
                     <div class="intereses-lista">
@@ -615,7 +616,7 @@
                             <span>Manualidades</span>
                         </div>
                         <div class="item-con-icono">
-                            <img src="img/mandarin.png" alt="Mandarín" class="icono-item">
+                            <img src="img/mandarin.png" alt="Manualidades" class="icono-item">
                             <span>Mandarín</span>
                         </div>
                     </div>
@@ -628,142 +629,187 @@
     <section class="seccion seccion-proyectos">
         <div class="galeria-container">
             <h2 class="titulo-seccion">Mis Proyectos</h2>
-            <div class="carrusel-container">
-                <button class="carrusel-boton prev">&#10094;</button>
-                <div class="carrusel">
-                    <div class="carrusel-imagenes">
-                        <!-- Proyecto 1 -->
-                        <img src="img/ESCENA1.png" 
-                             alt="Modelado 3D de personaje" 
-                             data-desc-titulo="Personaje Fantástico" 
-                             data-desc-texto="Modelado completo de personaje para videojuego indie, creado en Blender con texturas PBR y rigging para animación.">
-                        
-                        <!-- Proyecto 2 -->
-                        <img src="src/img/proyecto2.jpg" 
-                             alt="Escenario arquitectónico" 
-                             data-desc-titulo="Edificio Moderno" 
-                             data-desc-texto="Renderizado arquitectónico con iluminación natural en Unreal Engine 5, modelado desde planos CAD.">
-                        
-                        <!-- Proyecto 3 -->
-                        <img src="src/img/proyecto3.jpg" 
-                             alt="Diseño de producto" 
-                             data-desc-titulo="Lámpara Contemporánea" 
-                             data-desc-texto="Diseño industrial de lámpara con renderizado fotorrealista en Keyshot para catálogo de producto.">
-                        
-                        <!-- Proyecto 4 -->
-                        <img src="src/img/proyecto4.jpg" 
-                             alt="Animación 3D" 
-                             data-desc-titulo="Cortometraje Animado" 
-                             data-desc-texto="Animación de personaje para cortometraje independiente, incluyendo expresiones faciales y movimientos corporales.">
-                    </div>
+            <div class="carrusel">
+                <button class="carrusel-boton prev" onclick="moverSlide(-1)">&#10094;</button>
+                <div class="carrusel-imagenes">
+                    <img src="img/ESCENA1.png" alt="Proyecto 3D 1" onclick="abrirModal('proyecto1')">
+                    <img src="img/pastel.png" alt="Proyecto 3D 2" onclick="abrirModal('proyecto2')">
+                    <img src="img/señal.png" alt="Proyecto 3D 3" onclick="abrirModal('proyecto3')">
+                    <img src="img/top1.jpg" alt="Proyecto 3D 4" onclick="abrirModal('proyecto4')">
+                    <img src="img/key Visual-2.png" alt="Proyecto 3D 5" onclick="abrirModal('proyecto5')">
                 </div>
-                <button class="carrusel-boton next">&#10095;</button>
-            </div>
-            <div class="carrusel-puntos">
-                <div class="punto activo"></div>
-                <div class="punto"></div>
-                <div class="punto"></div>
-                <div class="punto"></div>
+                <button class="carrusel-boton next" onclick="moverSlide(1)">&#10095;</button>
             </div>
         </div>
     </section>
 
-    <!-- Modal para imágenes -->
-    <div id="modalProyecto" class="modal">
-        <span class="cerrar-modal">&times;</span>
+    <!-- Modal para imágenes - CARRUSEL INTERNO -->
+    <div id="miModal" class="modal">
+        <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
         <div class="modal-contenido">
-            <img class="modal-imagen" src="" alt="">
-            <div class="modal-info">
-                <h3 class="modal-titulo"></h3>
-                <p class="modal-texto"></p>
+            <div class="modal-galeria">
+                <div class="galeria-carrusel">
+                    <button class="galeria-boton prev" onclick="moverGaleria(-1)">&#10094;</button>
+                    <div class="galeria-imagenes">
+                    </div>
+                    <button class="galeria-boton next" onclick="moverGaleria(1)">&#10095;</button>
+                </div>
+            </div>
+            <div class="modal-texto">
+                <h3 id="modal-titulo">Frutos de vida</h3>
+                <p id="modal-descripcion">Botella frutos de vida... completar</p>
+                <div class="detalles-proyecto">
+                    <p><strong>Software:</strong> <span id="modal-software">3Desmax</span></p>
+                    <p><strong>Año:</strong> <span id="modal-anio">2023</span></p>
+                    <p><strong>Cliente:</strong> <span id="modal-cliente">Proyecto escolar</span></p>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Variables para el carrusel
-        const carrusel = document.querySelector('.carrusel-imagenes');
+        // Variables para el carrusel principal
+        let indiceActual = 0;
         const imagenes = document.querySelectorAll('.carrusel-imagenes img');
-        const puntos = document.querySelectorAll('.punto');
-        const prevBtn = document.querySelector('.prev');
-        const nextBtn = document.querySelector('.next');
-        let currentIndex = 0;
-        const imageWidth = imagenes[0].clientWidth + 25; // Ancho + gap
+        const totalImagenes = imagenes.length;
+        const carrusel = document.querySelector('.carrusel-imagenes');
 
-        // Función para actualizar el carrusel
-        function updateCarrusel() {
-            carrusel.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+        // Función para mover el carrusel principal
+        function moverSlide(direccion) {
+            indiceActual += direccion;
             
-            // Actualizar puntos indicadores
-            puntos.forEach((punto, index) => {
-                punto.classList.toggle('activo', index === currentIndex);
-            });
+            if (indiceActual >= totalImagenes) indiceActual = 0;
+            if (indiceActual < 0) indiceActual = totalImagenes - 1;
+            
+            const desplazamiento = -indiceActual * (imagenes[0].offsetWidth + 15);
+            carrusel.style.transform = `translateX(${desplazamiento}px)`;
         }
 
-        // Navegación
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % imagenes.length;
-            updateCarrusel();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + imagenes.length) % imagenes.length;
-            updateCarrusel();
-        });
-
-        // Puntos indicadores
-        puntos.forEach((punto, index) => {
-            punto.addEventListener('click', () => {
-                currentIndex = index;
-                updateCarrusel();
-            });
-        });
-
-        // Modal
-        const modal = document.getElementById('modalProyecto');
-        const modalImg = document.querySelector('.modal-imagen');
-        const modalTitulo = document.querySelector('.modal-titulo');
-        const modalTexto = document.querySelector('.modal-texto');
-
-        document.querySelectorAll('.carrusel-imagenes img').forEach(img => {
-            img.addEventListener('click', function() {
-                modalImg.src = this.src;
-                modalImg.alt = this.alt;
-                modalTitulo.textContent = this.dataset.descTitulo;
-                modalTexto.textContent = this.dataset.descTexto;
-                
-                modal.style.display = "block";
-                document.body.style.overflow = "hidden";
-            });
-        });
-
-        document.querySelector('.cerrar-modal').addEventListener('click', () => {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto";
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = "none";
-                document.body.style.overflow = "auto";
+        // Datos para las galerías
+        const proyectos = {
+            "proyecto1": {
+                titulo: "Frutos de vida",
+                descripcion: "Proyecto de modelado 3D de botella para la marca Frutos de vida y visual key de campaña publicitaria",
+                software: "3Des max",
+                año: "2024",
+                cliente: "Proyecto universitario",
+                imagenes: [
+                    "src/img/ESCENA3.png",
+                    "src/img/proyecto1-2.jpg",
+                    "src/img/proyecto1-3.jpg"
+                ]
+            },
+            "proyecto2": {
+                titulo: "Juguete didactico",
+                descripcion: "Juguete de madera para niños de 12 a 36 meses",
+                software: "Autocad, 3Des max",
+                año: "2024",
+                cliente: "Proyecto escolar",
+                imagenes: [
+                    "src/img/proyecto2-1.jpg",
+                    "src/img/proyecto2-2.jpg"
+                ]
+            },
+            "proyecto3": {
+                titulo: "Señal de emergencia",
+                descripcion: "Realización de señal de escaleras de emergencia... completar descripción",
+                software: "Fusion 360, Keyshot",
+                año: "2024",
+                cliente: "Proyecto escolar",
+                imagenes: [
+                    "src/img/proyecto3-1.jpg",
+                    "src/img/proyecto3-2.jpg",
+                    "src/img/proyecto3-3.jpg"
+                ]
+            },
+            "proyecto4": {
+                titulo: "Modelado de cabina de control",
+                descripcion: "Modelado de cabina de control 3D",
+                software: "SketchUp",
+                año: "2023",
+                cliente: "Proyecto personal",
+                imagenes: [
+                    "src/img/proyecto4-1.jpg",
+                    "src/img/proyecto4-2.jpg"
+                ]
+            },
+            "proyecto5": {
+                titulo: "Diseño de empaque",
+                descripcion: "Diseño de empaque y visual key... completar información",
+                software: "Illustrator, Photoshop",
+                año: "2023",
+                cliente: "Proyecto universitario",
+                imagenes: [
+                    "src/img/proyecto5-1.jpg",
+                    "src/img/proyecto5-2.jpg",
+                    "src/img/proyecto5-3.jpg"
+                ]
             }
-        });
+        };
 
-        let intervalo = setInterval(() => {
-            currentIndex = (currentIndex + 1) % imagenes.length;
-            updateCarrusel();
-        }, 5000);
+        // Variables para controlar la galería interna
+        let currentGalleryIndex = 0;
 
-        carrusel.addEventListener('mouseenter', () => {
-            clearInterval(intervalo);
-        });
+        // Función para abrir el modal con galería
+        function abrirModal(proyectoId) {
+            const proyecto = proyectos[proyectoId];
+            const modal = document.getElementById('miModal');
+            
+            // Configurar texto
+            document.getElementById('modal-titulo').textContent = proyecto.titulo;
+            document.getElementById('modal-descripcion').textContent = proyecto.descripcion;
+            document.getElementById('modal-software').textContent = proyecto.software;
+            document.getElementById('modal-anio').textContent = proyecto.anio;
+            document.getElementById('modal-cliente').textContent = proyecto.cliente;
+            
+            // Configurar galería
+            const galeria = document.querySelector('.galeria-imagenes');
+            galeria.innerHTML = '';
+            
+            proyecto.imagenes.forEach(imgSrc => {
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.alt = proyecto.titulo;
+                galeria.appendChild(img);
+            });
+            
+            // Mostrar modal
+            modal.style.display = "flex";
+            document.body.style.overflow = 'hidden';
+            
+            // Inicializar posición del carrusel
+            currentGalleryIndex = 0;
+            updateGalleryPosition();
+        }
 
-        carrusel.addEventListener('mouseleave', () => {
-            intervalo = setInterval(() => {
-                currentIndex = (currentIndex + 1) % imagenes.length;
-                updateCarrusel();
-            }, 5000);
-        });
+        function moverGaleria(direction) {
+            const galeria = document.querySelector('.galeria-imagenes');
+            const imagenes = galeria.querySelectorAll('img');
+            
+            currentGalleryIndex += direction;
+            
+            if (currentGalleryIndex >= imagenes.length) currentGalleryIndex = 0;
+            if (currentGalleryIndex < 0) currentGalleryIndex = imagenes.length - 1;
+            
+            updateGalleryPosition();
+        }
+
+        function updateGalleryPosition() {
+            const galeria = document.querySelector('.galeria-imagenes');
+            galeria.style.transform = `translateX(-${currentGalleryIndex * 100}%)`;
+        }
+
+        function cerrarModal() {
+            document.getElementById('miModal').style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('miModal');
+            if (event.target == modal) {
+                cerrarModal();
+            }
+        }
     </script>
 </body>
 </html>
